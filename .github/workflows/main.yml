@@ -28,5 +28,4 @@ jobs:
         run: |
           python3 --version
           cd ./test
-          sudo ifconfig
           python3 test_tdvf.py
