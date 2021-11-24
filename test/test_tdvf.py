@@ -4,8 +4,8 @@ import socket
 import time
 
 proxy = {
-         "http":"http://child-prc.intel.com:913",
-         "https":"http://child-prc.intel.com:913"
+         "http":"http://10.109.19.68:913",
+         "https":"http://10.109.19.68:913"
         }
 HOST_IP = '10.239.92.53'
 THREE_RD_HOST_PORT = '5001'
