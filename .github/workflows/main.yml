@@ -24,10 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Set Env
-        run: |
-          echo "HTTP_PROXY=child-prc.intel.com:913" >> $GITHUB_ENV
-          echo "HTTPS_PROXY=child-prc.intel.com:913" >> $GITHUB_ENV
       - name: Run Work
         run: |
           python3 --version
