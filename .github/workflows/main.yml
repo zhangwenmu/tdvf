@@ -29,5 +29,4 @@ jobs:
           python3 --version
           cd ./test
           sudo ifconfig
-          sudo ufw disable
           python3 test_tdvf.py
