@@ -3,6 +3,10 @@ import requests
 import socket
 import time
 
+proxy = {
+         "http":"http://child-prc.intel.com:913",
+         "https":"http://child-prc.intel.com:913"
+        }
 HOST_IP = '10.239.92.53'
 THREE_RD_HOST_PORT = '5001'
 CLAMAV_HOST_PORT = '5002'
@@ -20,12 +24,12 @@ class TDVF_case(object):
 
     def test_scan(self, data):
         url = self.host + CLAMAV_HOST_PORT + '/rest/clamav/scan/' + self.username + '/'
-        resp = requests.post(url, json=data, headers=self.headers, verify=False)
+        resp = requests.post(url, json=data, headers=self.headers, verify=False, proxies=proxy)
         return resp
 
     def test_submit(self, data):
         url = self.host + KLOCKWORK_HOST_PORT + '/rest/klocwork/submit/' + self.username + '/'
-        resp = requests.post(url, json=data, headers=self.headers, verify=False)
+        resp = requests.post(url, json=data, headers=self.headers, verify=False, proxies=proxy)
         return resp
 
 
