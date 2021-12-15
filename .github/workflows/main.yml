@@ -25,7 +25,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Run Work
-        run: |
-          python3 --version
-          cd ./test
-          python3 test_tdvf.py
+        run: curl http://10.239.92.53:10240/job/clamav/build?token=TOKEN_wenmu
+  
