@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: cheshi jenkin
+      - name: cheshi jenkins
         env:
           TOKEN: ${{ secrets.TOKEN }}
         run: curl http://10.239.92.53:8080/job/clamav/build?token=TOKEN
